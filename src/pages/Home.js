@@ -1,11 +1,12 @@
 import React from 'react'
 import computer from '../images/sw-split-photo.jpg'
+import { SplitImg, Split, SplitTitle } from '../Styled/Split'
 
 export default function Home() {
   return (
-    <div className="split">
+    <Split>
       <div>
-        <h1 class="split-title">Empire Under Fire</h1>
+        <SplitTitle>Empire Under Fire</SplitTitle>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, fugit
           provident. Fugit, distinctio dolor nesciunt natus quidem laborum
@@ -20,8 +21,8 @@ export default function Home() {
         </p>
       </div>
       <div>
-        <img src={computer} alt="" />
+        <SplitImg src={computer} alt="" />
       </div>
-    </div>
+    </Split>
   )
 }

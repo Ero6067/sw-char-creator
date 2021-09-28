@@ -1,21 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Navbar() {
+import {
+  Nav,
+  NavBrand,
+  NavItems,
+  NavItem,
+  NavItemButton,
+} from '../Styled/Navbar'
+
+export default function NavbarStyledComponents() {
   return (
-    <nav className="nav">
-      <Link to="/" className="nav-brand">
-        Cool Product
-      </Link>
-      <ul className="nav-items">
-        <Link className="nav-item" to="/pricing">
-          Pricing
-        </Link>
-        <Link className="nav-item">Docs</Link>
-        <Link className="nav-item link-button">Log in</Link>
-        <Link className="nav-item link-button link-button-primary">
+    <Nav>
+      <NavBrand to="/">Cool Product</NavBrand>
+      <NavItems>
+        <NavItem to="/pricing">Pricing</NavItem>
+        <NavItem to="/">Docs</NavItem>
+        <NavItemButton to="/">Log in</NavItemButton>
+        <NavItemButton primary to="/">
           Get Started For Free
-        </Link>
-      </ul>
-    </nav>
+        </NavItemButton>
+      </NavItems>
+    </Nav>
   )
 }

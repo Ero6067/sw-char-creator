@@ -2,16 +2,17 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Pricing from './pages/Pricing'
 import { Container } from './Styled/Container'
-
+import { GlobalStyle } from './Styled/Global'
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <Navbar />
       <Container>
-        <div className="container">
-          <Route path="/" exact component={Home} />
-        </div>
+        <Route path="/" exact component={Home} />
+        <Route path="/pricing" component={Pricing} />
       </Container>
     </Router>
   )
